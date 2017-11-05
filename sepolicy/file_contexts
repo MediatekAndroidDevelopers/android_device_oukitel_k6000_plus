@@ -1,2 +1,3 @@
 # Sysfs nodes
-/sys/android_touch/gesture           u:object_r:smartwake_sysfs:s0
+/sys/devices/soc/soc:touch/tpgesture          u:object_r:smartwake_sysfs:s0
+/sys/devices/soc/soc:touch/tpgesture_status   u:object_r:smartwake_sysfs:s0

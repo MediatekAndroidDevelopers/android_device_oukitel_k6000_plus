@@ -370,7 +370,8 @@ on post-fs-data
     chown system system /sys/bus/platform/drivers/gyroscope/gyro_orientation
 
     # Smartwake
-    chown system system /sys/android_touch/gesture
+    chown system system /sys/devices/soc/soc:touch/tpgesture
+    chown system system /sys/devices/soc/soc:touch/tpgesture_status
 
 on boot
     write /proc/sys/vm/dirty_writeback_centisecs 300
