@@ -352,10 +352,6 @@ on post-fs-data
     chmod 0660 /dev/ttyC2
     chown system gps /dev/ttyC2
 
-	# Fingerprint
-	chmod 0666 /dev/esfp0
-    chown system system /dev/esfp0
-
     # IO Scheduler
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0660 /sys/block/mmcblk0/queue/scheduler
@@ -372,6 +368,16 @@ on post-fs-data
     # Smartwake
     chown system system /sys/devices/soc/soc:touch/tpgesture
     chown system system /sys/devices/soc/soc:touch/tpgesture_status
+
+    # Trustzone
+    mkdir /data/tee
+    chown system system /data/tee
+    chmod 0755 /data/tee
+
+    write /data/teec.log 0
+    chmod 0660 /data/teec.log
+    chown system system /data/teec.log
+    restorecon /data/teec.log
 
 on boot
     write /proc/sys/vm/dirty_writeback_centisecs 300

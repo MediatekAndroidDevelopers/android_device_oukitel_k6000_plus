@@ -1,3 +1,6 @@
 # Sysfs nodes
 /sys/devices/soc/soc:touch/tpgesture          u:object_r:smartwake_sysfs:s0
 /sys/devices/soc/soc:touch/tpgesture_status   u:object_r:smartwake_sysfs:s0
+
+# Fingerprint HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint\.microarray@2\.1-service u:object_r:hal_fingerprint_default_exec:s0

@@ -100,4 +100,10 @@
 /dev/kick_powerkey        0600   system     system
 
 # MTK In-House TEE
-/dev/ttyACM0		      0660   radio	    radio
+/dev/ttyACM0              0660   radio	    radio
+
+# Trustzone
+/dev/tkcoredrv            0666   root       root
+
+# Fingerprint
+/dev/madev0               0660   system     system
