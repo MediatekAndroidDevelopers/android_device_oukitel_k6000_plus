@@ -379,6 +379,8 @@ on post-fs-data
     chown system system /data/teec.log
     restorecon /data/teec.log
 
+    chown system system /dev/spm
+
 on boot
     write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
