@@ -43,8 +43,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/ueventd.mt6755.rc:root/ueventd.mt6755.rc
 
 # TWRP
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_PACKAGES += \
+    init.recovery.vold_decrypt.rc
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -59,7 +59,8 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \

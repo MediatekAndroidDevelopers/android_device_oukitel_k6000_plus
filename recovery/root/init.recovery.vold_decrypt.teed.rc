@@ -1,0 +1,7 @@
+service sys_teed /system/vendor/bin/teed
+	user system
+	group system
+        setenv PATH /system/bin:/vendor/bin
+        setenv LD_LIBRARY_PATH /system/lib64:/system/lib:/vendor/lib64:/vendor/lib
+	disabled
+    	seclabel u:r:vold:s0

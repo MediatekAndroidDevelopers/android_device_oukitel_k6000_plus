@@ -1,0 +1,18 @@
+service sys_hwsvcmngr /system/bin/hwservicemanager
+    user root
+    group root
+    setenv PATH /system/bin
+    setenv LD_LIBRARY_PATH /system/lib64:/system/lib
+    onrestart setprop hwservicemanager.ready false
+    disabled
+    oneshot
+    seclabel u:r:vold:s0
+    #~ user system
+    #~ disabled
+    #~ group system readproc
+    #~ critical
+    #~ onrestart setprop hwservicemanager.ready false
+    #~ onrestart class_restart hal
+    #~ onrestart class_restart early_hal
+    #~ writepid /dev/cpuset/system-background/tasks
+    #~ class animation
