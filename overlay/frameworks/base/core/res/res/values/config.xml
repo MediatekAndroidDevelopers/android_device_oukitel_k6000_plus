@@ -149,4 +149,15 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">83</integer>
 
+    <!-- Is the device capable of fingerprint actions
+	Fingerprint options of the device, stored as a bit field.
+        This integer should equal the sum of the corresponding value for each
+        of the following options present:
+            1 - Single tap
+            2 - Double tap
+            4 - Long tap
+         For example, a device with Single and Long tap would set this
+         config to 5. -->
+    <integer name="config_fingerprintActions">5</integer>
+
 </resources>
