@@ -15,6 +15,11 @@ on init
     chown root system /dev/kmsg
     chmod 0660 /dev/kmsg
 
+on charger
+    chown system system /dev/spm
+    start spm_script
+    start fuelgauged
+
 on fs
     mount_all /fstab.mt6755
 
