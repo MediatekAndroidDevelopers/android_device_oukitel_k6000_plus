@@ -7,12 +7,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oukitel/k6000_plus/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := K6000_Plus
+PRODUCT_RELEASE_NAME := K6000 Plus
 
 PRODUCT_DEVICE := k6000_plus
 PRODUCT_NAME := full_k6000_plus
 PRODUCT_BRAND := Oukitel
-PRODUCT_MODEL := K6000_Plus
+PRODUCT_MODEL := K6000 Plus
 PRODUCT_MANUFACTURER := Oukitel
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
